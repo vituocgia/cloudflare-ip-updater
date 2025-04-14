@@ -60,7 +60,7 @@ A lightweight, user-friendly desktop application that automatically updates your
 ### Building from Source (Detailed)
 ```
 # Clone the repository
-git clone https://github.com/yourusername/cloudflare-ip-updater.git
+git clone https://github.com/vituocgia/cloudflare-ip-updater.git
 cd cloudflare-ip-updater
 
 # Create and activate virtual environment

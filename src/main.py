@@ -5,7 +5,7 @@ import datetime
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
     QLabel, QLineEdit, QPushButton, QTextEdit, QMessageBox, 
-    QSystemTrayIcon, QMenu, QCheckBox, QTableWidget, QTableWidgetItem, 
+    QSystemTrayIcon, QMenuBar, QFrame, QMenu, QCheckBox, QTableWidget, QTableWidgetItem, 
     QDialog, QFormLayout, QHeaderView, QAbstractItemView, QSpinBox,
     QGroupBox, QSplitter, QAction, QToolBar, QStatusBar, QComboBox
 )
@@ -195,6 +195,55 @@ class MainApplication(QMainWindow):
         settings_action.triggered.connect(self.show_settings)
         toolbar.addAction(settings_action)
 
+        # Create menu bar
+        menu_bar = self.menuBar()
+        
+        # File menu
+        file_menu = menu_bar.addMenu('&File')
+
+        # Add domain action
+        add_domain_menu = QAction('&Add Domain', self)
+        add_domain_menu.triggered.connect(self.add_domain)
+        file_menu.addAction(add_domain_menu)
+
+        file_menu.addSeparator()
+
+        # Exit action
+        exit_action = QAction('E&xit', self)
+        exit_action.triggered.connect(self.close_application)
+        file_menu.addAction(exit_action)
+
+        # Tools menu
+        tools_menu = menu_bar.addMenu('&Tools')
+
+        # Manual update action
+        update_action = QAction('&Manual Update', self)
+        update_action.triggered.connect(self.manual_update_all_domains)
+        tools_menu.addAction(update_action)
+
+        # Start/Stop All actions
+        start_all_menu = QAction('Start &All Domains', self)
+        start_all_menu.triggered.connect(self.start_all_domains)
+        tools_menu.addAction(start_all_menu)
+
+        stop_all_menu = QAction('&Stop All Domains', self)
+        stop_all_menu.triggered.connect(self.stop_all_domains)
+        tools_menu.addAction(stop_all_menu)
+
+        tools_menu.addSeparator()
+
+        # Open config folder action
+        open_config_action = QAction('Open &Config Folder', self)
+        open_config_action.triggered.connect(self.open_config_folder)
+        tools_menu.addAction(open_config_action)
+
+        # Help menu
+        help_menu = menu_bar.addMenu('&Help')
+
+        # About action
+        about_action = QAction('&About', self)
+        about_action.triggered.connect(self.show_about)
+        help_menu.addAction(about_action)
         # Central widget
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
@@ -313,6 +362,21 @@ class MainApplication(QMainWindow):
         self.ip_display_timer.timeout.connect(self.update_current_ip_display)
         self.ip_display_timer.start(5 * 60 * 1000)  # 5 minutes
 
+    def open_config_folder(self):
+        """Open the folder containing the configuration file"""
+        try:
+            config_dir = os.path.dirname(os.path.abspath(self.config_manager.config_file))
+            # Use os.startfile on Windows
+            os.startfile(config_dir)
+        except Exception as e:
+            self.update_log_display(f"Error opening config folder: {str(e)}")
+            QMessageBox.warning(self, 'Error', f"Could not open config folder: {str(e)}")
+
+    def show_about(self):
+        """Show the About dialog"""
+        dialog = AboutDialog(self)
+        dialog.exec_()
+        
     def update_current_ip_display(self):
         """Update the current IP display in the status bar"""
         def update_label():
@@ -947,6 +1011,74 @@ class MainApplication(QMainWindow):
         
         # Quit the application
         QApplication.quit()
+        
+class AboutDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle('About Cloudflare Dynamic IP Updater')
+        self.setFixedSize(400, 300)
+        self.init_ui()
+        
+    def init_ui(self):
+        layout = QVBoxLayout()
+        
+        # App logo/icon
+        icon_label = QLabel()
+        icon_path = self.parent().get_icon_path() if self.parent() else None
+        if icon_path and os.path.exists(icon_path):
+            pixmap = QPixmap(icon_path).scaled(64, 64, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+            icon_label.setPixmap(pixmap)
+        icon_label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(icon_label)
+        
+        # App name with version
+        app_name = QLabel('Cloudflare Dynamic IP Updater')
+        app_name.setStyleSheet('font-size: 16pt; font-weight: bold;')
+        app_name.setAlignment(Qt.AlignCenter)
+        layout.addWidget(app_name)
+        
+        version = QLabel('Version 0.1.0')
+        version.setAlignment(Qt.AlignCenter)
+        layout.addWidget(version)
+        
+        # Line separator
+        line = QFrame()
+        line.setFrameShape(QFrame.HLine)
+        line.setFrameShadow(QFrame.Sunken)
+        layout.addWidget(line)
+        
+        # Company/Author
+        company = QLabel('© 2025 XoneVN')
+        company.setAlignment(Qt.AlignCenter)
+        layout.addWidget(company)
+        
+        # Description
+        description = QLabel('A lightweight, user-friendly desktop application that automatically updates your Cloudflare DNS records with your current dynamic IP address.')
+        description.setWordWrap(True)
+        description.setAlignment(Qt.AlignCenter)
+        layout.addWidget(description)
+        
+        # GitHub link
+        github_link = QLabel('<a href="https://github.com/vituocgia/cloudflare-ip-updater">GitHub Repository</a>')
+        github_link.setOpenExternalLinks(True)
+        github_link.setAlignment(Qt.AlignCenter)
+        layout.addWidget(github_link)
+        
+        layout.addStretch(1)
+        
+        # OK button
+        ok_button = QPushButton('OK')
+        ok_button.clicked.connect(self.accept)
+        ok_button.setFixedWidth(100)
+        
+        button_layout = QHBoxLayout()
+        button_layout.addStretch(1)
+        button_layout.addWidget(ok_button)
+        button_layout.addStretch(1)
+        
+        layout.addLayout(button_layout)
+        
+        self.setLayout(layout)
 
 def main():
     # Create application

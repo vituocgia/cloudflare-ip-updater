@@ -62,7 +62,11 @@ class CloudflareIPUpdater:
             data = response.json()
             
             if data.get('success') and data.get('result'):
-                return data['result'][0]
+                if len(data['result']) > 0:  # Check if any results exist
+                    return data['result'][0]
+                else:
+                    self._logger.error(f"No DNS records found for {domain}")
+                    return None
             else:
                 error_msg = data.get('errors', [{'message': 'Unknown error'}])[0].get('message', 'Failed to retrieve DNS record')
                 self._logger.error(f"Cloudflare API error: {error_msg}")
@@ -244,6 +248,8 @@ class CloudflareIPUpdater:
         # Stop if already running
         if domain_key in self._active_domains and self._active_domains[domain_key]:
             self.stop_updating(domain, zone_id)
+            # Wait a moment to ensure thread has time to recognize stop signal
+            time.sleep(0.5)
         
         # Set domain as active
         self._active_domains[domain_key] = True
@@ -252,7 +258,8 @@ class CloudflareIPUpdater:
         thread = threading.Thread(
             target=self._update_ip_thread, 
             args=(api_token, zone_id, domain, interval, log_callback),
-            daemon=True
+            daemon=True,
+            name=f"updater-{domain_key}"  # Add name for debugging
         )
         thread.start()
         

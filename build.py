@@ -63,6 +63,64 @@ def clean_build_dir():
             except Exception as e:
                 print(f"Error cleaning {dir_name}: {e}")
 
+def create_version_info():
+    """
+    Create version info file for the executable
+    """
+    version_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'version_info.txt')
+    
+    if not os.path.exists(version_path):
+        print("Creating version info file...")
+        version_content = """# UTF-8
+#
+# For more details about fixed file info 'ffi' see:
+# http://msdn.microsoft.com/en-us/library/ms646997.aspx
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    # filevers and prodvers should be always a tuple with four items: (1, 2, 3, 4)
+    # Set not needed items to zero 0.
+    filevers=(1, 0, 0, 0),
+    prodvers=(1, 0, 0, 0),
+    # Contains a bitmask that specifies the valid bits 'flags'r
+    mask=0x3f,
+    # Contains a bitmask that specifies the Boolean attributes of the file.
+    flags=0x0,
+    # The operating system for which this file was designed.
+    # 0x4 - NT and there is no need to change it.
+    OS=0x40004,
+    # The general type of file.
+    # 0x1 - the file is an application.
+    fileType=0x1,
+    # The function of the file.
+    # 0x0 - the function is not defined for this fileType
+    subtype=0x0,
+    # Creation date and time stamp.
+    date=(0, 0)
+    ),
+  kids=[
+    StringFileInfo(
+      [
+      StringTable(
+        u'040904B0',
+        [StringStruct(u'CompanyName', u'XoneVN'),
+        StringStruct(u'FileDescription', u'Updates Cloudflare DNS with your current IP address'),
+        StringStruct(u'FileVersion', u'0.1.0'),
+        StringStruct(u'InternalName', u'cloudflare_ip_updater'),
+        StringStruct(u'LegalCopyright', u'Copyright (c) 2025 XoneVN'),
+        StringStruct(u'OriginalFilename', u'CloudflareIPUpdater.exe'),
+        StringStruct(u'ProductName', u'Cloudflare Dynamic IP Updater'),
+        StringStruct(u'ProductVersion', u'0.1.0')])
+      ]), 
+    VarFileInfo([VarStruct(u'Translation', [1033, 1200])])
+  ]
+)"""
+        
+        with open(version_path, 'w') as f:
+            f.write(version_content)
+        print(f"Created version info file at {version_path}")
+    else:
+        print("Version info file already exists")
+
 def build_executable():
     """
     Build the executable using PyInstaller
@@ -73,6 +131,9 @@ def build_executable():
     
     # Clean previous build
     clean_build_dir()
+    
+    # Create version info file
+    create_version_info()
 
     # Create build command
     build_command = [
@@ -82,7 +143,8 @@ def build_executable():
         '--name=CloudflareIPUpdater',
         '--add-data', f'icon.ico{os.pathsep}.',
         '--icon=icon.ico',
-        'main.py'
+        '--version-file=version_info.txt',
+        'src/main.py'
     ]
 
     try:
