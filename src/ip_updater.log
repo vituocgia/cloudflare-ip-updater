@@ -1,0 +1,141 @@
+2025-04-14 16:44:48,491 - INFO - Application started at 2025-04-14 16:44:48
+2025-04-14 16:44:48,492 - INFO - Log file: D:\Python_Prj\IpUpdater\src\ip_updater.log
+2025-04-14 16:44:49,245 - INFO - Added application to Windows startup
+2025-04-14 16:45:38,608 - INFO - Application started at 2025-04-14 16:45:38
+2025-04-14 16:45:38,608 - INFO - Log file: D:\Python_Prj\IpUpdater\src\ip_updater.log
+2025-04-14 16:45:39,286 - INFO - Added application to Windows startup
+2025-04-14 16:45:39,313 - INFO - Loaded 0 domains from configuration
+2025-04-14 16:45:44,352 - INFO - Manual Update Complete. Updated: 0, Failed: 0
+2025-04-14 16:45:50,606 - INFO - Log cleared
+2025-04-14 16:45:54,201 - INFO - Manual Update Complete. Updated: 0, Failed: 0
+2025-04-14 16:46:26,463 - INFO - Configuration saved successfully
+2025-04-14 16:46:26,463 - INFO - Added domain: dyns.xone.vn
+2025-04-14 16:46:30,361 - INFO - Starting update thread for dyns.xone.vn with 15 minute interval
+2025-04-14 16:46:30,361 - INFO - Started IP updating for dyns.xone.vn with 15 minute interval
+2025-04-14 16:46:30,361 - INFO - Starting update thread for dyns.xone.vn with 15 minute interval
+2025-04-14 16:46:30,361 - INFO - Started IP updating for dyns.xone.vn with 15 minute interval
+2025-04-14 16:46:30,361 - INFO - Started updates for dyns.xone.vn
+2025-04-14 16:46:30,689 - INFO - Check #1: Checking IP for dyns.xone.vn...
+2025-04-14 16:46:30,689 - INFO - Check #1: Checking IP for dyns.xone.vn...
+2025-04-14 16:46:30,689 - INFO - Initial IP for dyns.xone.vn is 42.118.160.170
+2025-04-14 16:46:30,689 - INFO - Initial IP for dyns.xone.vn is 42.118.160.170
+2025-04-14 16:46:30,689 - INFO - IP change detected for dyns.xone.vn: None -> 42.118.160.170
+2025-04-14 16:46:30,689 - INFO - IP change detected for dyns.xone.vn: None -> 42.118.160.170
+2025-04-14 16:46:31,154 - INFO - IP unchanged for dyns.xone.vn: 42.118.160.170
+2025-04-14 16:46:31,154 - INFO - Successfully updated dyns.xone.vn DNS record to 42.118.160.170
+2025-04-14 16:46:31,154 - INFO - Successfully updated dyns.xone.vn DNS record to 42.118.160.170
+2025-04-14 16:46:31,154 - INFO - Next check for dyns.xone.vn in 15 minutes
+2025-04-14 16:46:31,154 - INFO - Next check for dyns.xone.vn in 15 minutes
+2025-04-14 16:46:41,989 - INFO - Log cleared
+2025-04-14 16:47:22,370 - INFO - IP unchanged for dyns.xone.vn: 42.118.160.170
+2025-04-14 16:47:22,370 - INFO - Manually updated dyns.xone.vn to IP 42.118.160.170
+2025-04-14 16:47:22,370 - INFO - Manual Update Complete. Updated: 1, Failed: 0
+2025-04-14 16:47:40,220 - INFO - Starting update thread for dyns.xone.vn with 1 minute interval
+2025-04-14 16:47:40,220 - INFO - Started IP updating for dyns.xone.vn with 1 minute interval
+2025-04-14 16:47:40,220 - INFO - Starting update thread for dyns.xone.vn with 1 minute interval
+2025-04-14 16:47:40,220 - INFO - Started IP updating for dyns.xone.vn with 1 minute interval
+2025-04-14 16:47:40,220 - INFO - Started updates for dyns.xone.vn
+2025-04-14 16:47:40,220 - INFO - Configuration saved successfully
+2025-04-14 16:47:40,220 - INFO - Updated domain: dyns.xone.vn
+2025-04-14 16:47:40,546 - INFO - Check #1: Checking IP for dyns.xone.vn...
+2025-04-14 16:47:40,546 - INFO - Check #1: Checking IP for dyns.xone.vn...
+2025-04-14 16:47:40,546 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:47:40,546 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:47:40,546 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:47:40,546 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:48:40,859 - INFO - Check #2: Checking IP for dyns.xone.vn...
+2025-04-14 16:48:40,859 - INFO - Check #2: Checking IP for dyns.xone.vn...
+2025-04-14 16:48:40,859 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:48:40,859 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:48:40,859 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:48:40,859 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:49:07,466 - INFO - Stopped updates for dyns.xone.vn
+2025-04-14 16:49:10,865 - INFO - Update thread for dyns.xone.vn stopped
+2025-04-14 16:49:10,865 - INFO - Update thread for dyns.xone.vn stopped
+2025-04-14 16:49:11,160 - INFO - Update thread for dyns.xone.vn stopped
+2025-04-14 16:49:11,160 - INFO - Update thread for dyns.xone.vn stopped
+2025-04-14 16:49:37,265 - ERROR - Error retrieving DNS record: list index out of range
+2025-04-14 16:50:10,463 - INFO - Configuration saved successfully
+2025-04-14 16:50:10,463 - INFO - Added domain: demo.xone.vn
+2025-04-14 16:50:14,566 - INFO - Starting update thread for dyns.xone.vn with 1 minute interval
+2025-04-14 16:50:14,566 - INFO - Started IP updating for dyns.xone.vn with 1 minute interval
+2025-04-14 16:50:14,566 - INFO - Starting update thread for dyns.xone.vn with 1 minute interval
+2025-04-14 16:50:14,566 - INFO - Started IP updating for dyns.xone.vn with 1 minute interval
+2025-04-14 16:50:14,566 - INFO - Started updates for dyns.xone.vn
+2025-04-14 16:50:14,566 - INFO - Starting update thread for demo.xone.vn with 1 minute interval
+2025-04-14 16:50:14,566 - INFO - Started IP updating for demo.xone.vn with 1 minute interval
+2025-04-14 16:50:14,566 - INFO - Starting update thread for demo.xone.vn with 1 minute interval
+2025-04-14 16:50:14,566 - INFO - Started IP updating for demo.xone.vn with 1 minute interval
+2025-04-14 16:50:14,566 - INFO - Started updates for demo.xone.vn
+2025-04-14 16:50:14,876 - INFO - Check #1: Checking IP for dyns.xone.vn...
+2025-04-14 16:50:14,876 - INFO - Check #1: Checking IP for dyns.xone.vn...
+2025-04-14 16:50:14,876 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:50:14,876 - INFO - Check #1: Checking IP for demo.xone.vn...
+2025-04-14 16:50:14,876 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:50:14,876 - INFO - Check #1: Checking IP for demo.xone.vn...
+2025-04-14 16:50:14,876 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:50:14,876 - INFO - Initial IP for demo.xone.vn is 42.118.160.170
+2025-04-14 16:50:14,876 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:50:14,876 - INFO - Initial IP for demo.xone.vn is 42.118.160.170
+2025-04-14 16:50:14,876 - INFO - IP change detected for demo.xone.vn: None -> 42.118.160.170
+2025-04-14 16:50:14,876 - INFO - IP change detected for demo.xone.vn: None -> 42.118.160.170
+2025-04-14 16:50:15,545 - INFO - Successfully updated demo.xone.vn to 42.118.160.170
+2025-04-14 16:50:15,545 - INFO - Successfully updated demo.xone.vn DNS record to 42.118.160.170
+2025-04-14 16:50:15,545 - INFO - Successfully updated demo.xone.vn DNS record to 42.118.160.170
+2025-04-14 16:50:15,545 - INFO - Next check for demo.xone.vn in 1 minutes
+2025-04-14 16:50:15,545 - INFO - Next check for demo.xone.vn in 1 minutes
+2025-04-14 16:50:39,326 - INFO - Configuration saved successfully
+2025-04-14 16:51:15,225 - INFO - Check #2: Checking IP for dyns.xone.vn...
+2025-04-14 16:51:15,226 - INFO - Check #2: Checking IP for dyns.xone.vn...
+2025-04-14 16:51:15,226 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:51:15,226 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:51:15,226 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:51:15,226 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:51:15,863 - INFO - Check #2: Checking IP for demo.xone.vn...
+2025-04-14 16:51:15,863 - INFO - Check #2: Checking IP for demo.xone.vn...
+2025-04-14 16:51:15,863 - INFO - No IP change for demo.xone.vn, still 42.118.160.170
+2025-04-14 16:51:15,864 - INFO - No IP change for demo.xone.vn, still 42.118.160.170
+2025-04-14 16:51:15,864 - INFO - Next check for demo.xone.vn in 1 minutes
+2025-04-14 16:51:15,864 - INFO - Next check for demo.xone.vn in 1 minutes
+2025-04-14 16:52:15,535 - INFO - Check #3: Checking IP for dyns.xone.vn...
+2025-04-14 16:52:15,544 - INFO - Check #3: Checking IP for dyns.xone.vn...
+2025-04-14 16:52:15,551 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:52:15,553 - INFO - No IP change for dyns.xone.vn, still 42.118.160.170
+2025-04-14 16:52:15,553 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:52:15,555 - INFO - Next check for dyns.xone.vn in 1 minutes
+2025-04-14 16:52:16,153 - INFO - Check #3: Checking IP for demo.xone.vn...
+2025-04-14 16:52:16,153 - INFO - Check #3: Checking IP for demo.xone.vn...
+2025-04-14 16:52:16,153 - INFO - No IP change for demo.xone.vn, still 42.118.160.170
+2025-04-14 16:52:16,153 - INFO - No IP change for demo.xone.vn, still 42.118.160.170
+2025-04-14 16:52:16,153 - INFO - Next check for demo.xone.vn in 1 minutes
+2025-04-14 16:52:16,153 - INFO - Next check for demo.xone.vn in 1 minutes
+2025-04-14 16:52:35,894 - INFO - Stopped updates for dyns.xone.vn
+2025-04-14 16:52:35,894 - INFO - Stopped updates for demo.xone.vn
+2025-04-14 16:52:36,157 - INFO - Update thread for demo.xone.vn stopped
+2025-04-14 16:52:36,157 - INFO - Update thread for demo.xone.vn stopped
+2025-04-14 16:52:41,613 - INFO - Configuration saved successfully
+2025-04-14 16:52:41,613 - INFO - Updated domain: demo.xone.vn
+2025-04-14 16:52:45,557 - INFO - Update thread for dyns.xone.vn stopped
+2025-04-14 16:52:45,557 - INFO - Update thread for dyns.xone.vn stopped
+2025-04-14 16:52:45,658 - INFO - Configuration saved successfully
+2025-04-14 16:52:45,658 - INFO - Updated domain: dyns.xone.vn
+2025-04-14 16:52:50,055 - INFO - Log cleared
+2025-04-14 16:52:52,132 - INFO - Configuration saved successfully
+2025-04-14 16:52:52,132 - INFO - Application closed
+2025-04-14 16:52:57,272 - INFO - Application started at 2025-04-14 16:52:57
+2025-04-14 16:52:57,272 - INFO - Log file: D:\Python_Prj\IpUpdater\src\ip_updater.log
+2025-04-14 16:52:58,020 - INFO - Added application to Windows startup
+2025-04-14 16:52:58,046 - INFO - Loaded 2 domains from configuration
+2025-04-14 16:53:41,120 - INFO - IP unchanged for dyns.xone.vn: 42.118.160.170
+2025-04-14 16:53:41,120 - INFO - Manually updated dyns.xone.vn to IP 42.118.160.170
+2025-04-14 16:53:41,732 - INFO - IP unchanged for demo.xone.vn: 42.118.160.170
+2025-04-14 16:53:41,732 - INFO - Manually updated demo.xone.vn to IP 42.118.160.170
+2025-04-14 16:53:41,732 - INFO - Manual Update Complete. Updated: 2, Failed: 0
+2025-04-14 16:53:47,669 - INFO - Configuration saved successfully
+2025-04-14 16:53:47,669 - INFO - Application closed
+2025-04-14 16:59:53,422 - INFO - Application started at 2025-04-14 16:59:53
+2025-04-14 16:59:53,423 - INFO - Log file: D:\Python_Prj\IpUpdater\src\ip_updater.log
+2025-04-14 16:59:54,082 - INFO - Added application to Windows startup
+2025-04-14 16:59:54,110 - INFO - Loaded 2 domains from configuration
+2025-04-14 17:00:00,529 - INFO - Configuration saved successfully
+2025-04-14 17:00:00,529 - INFO - Application closed

@@ -1,0 +1,4 @@
+/dist
+/venv
+/build
+/src/__pycache__/*.pyc
